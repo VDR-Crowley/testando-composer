@@ -1,0 +1,25 @@
+{
+    "name": "vdrcrowley/notification",
+    "description": "this is a library that users composer as the basici for generating email notification",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vdrcrowley\\Notification\\": "_app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vando Dos Reis",
+            "email": "vandodosreis2001@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "v6.8.0"
+    },
+    "config": {
+        "vendor-dir": "lib_ext"
+    }
+}
