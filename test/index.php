@@ -1,31 +1,9 @@
 <?php
-
-require __DIR__ . '/../lib_ext/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Vdrcrowley\Notification\Email;
 
-//var_dump($email);
+$email = new Email(2, "mail.host.com", "your@email.com", "your-pass", "smtp secure (tls/ssl)", "port (587)",
+  "from@email.com", "From Name");
 
-
-$newEmail = new Email(
-  '2',
-  'mail.gustavoweb.me',
-  'sender@gustavoweb.me',
-  'teste@123',
-  'tls',
-  '587',
-  'gustavo@gustavoweb.me',
-  'Equipe GustavoWeb'
-);
-
-//var_dump($newEmail);
-
-
-$newEmail->sendMail(
-  'Testando Envio do email',
-  "<p>Testando o <strong>Envio de Email</strong></p>",
-  'gustavo@gustavoweb.me',
-  'Gustavo Web',
-  'vandodosreis2001@gmail.com',
-  'Vando dos Reis',
-);
+$email->sendEmail("SUbject", "Content", "reply@email.com", "Replay Name", "address@email.com", "Address Name");
