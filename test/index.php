@@ -1,13 +1,22 @@
 <?php
 
-require __DIR__ . '/lib_ext/autoload.php';
+require __DIR__ . '/../lib_ext/autoload.php';
 
 use Vdrcrowley\Notification\Email;
 
 //var_dump($email);
 
 
-$newEmail = new Email();
+$newEmail = new Email(
+  '2',
+  'mail.gustavoweb.me',
+  'sender@gustavoweb.me',
+  'teste@123',
+  'tls',
+  '587',
+  'gustavo@gustavoweb.me',
+  'Equipe GustavoWeb'
+);
 
 //var_dump($newEmail);
 
